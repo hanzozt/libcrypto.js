@@ -69,9 +69,9 @@ jobs:
           build-args: |
             EMSCRIPTEN_V=4.0.20
           tags: |
-            ghcr.io/openziti/libcryptojs-build:${{ github.run_number }}
-            ghcr.io/openziti/libcryptojs-build:latest
-            ghcr.io/openziti/libcryptojs-build:${{ steps.extract_version_number.outputs.version_number }}
+            ghcr.io/hanzozt/libcryptojs-build:${{ github.run_number }}
+            ghcr.io/hanzozt/libcryptojs-build:latest
+            ghcr.io/hanzozt/libcryptojs-build:${{ steps.extract_version_number.outputs.version_number }}
         if: |
           steps.extract_branch.outputs.branch == 'main'
 
@@ -84,7 +84,7 @@ jobs:
           build-args: |
             EMSCRIPTEN_V=4.0.20
           tags: |
-            ghcr.io/openziti/libcryptojs-build:${{ github.run_number }}
-            ghcr.io/openziti/libcryptojs-build:PR${{ steps.extract_pr_number.outputs.pr_number }}.${{ github.run_number }}
+            ghcr.io/hanzozt/libcryptojs-build:${{ github.run_number }}
+            ghcr.io/hanzozt/libcryptojs-build:PR${{ steps.extract_pr_number.outputs.pr_number }}.${{ github.run_number }}
         if: |
           steps.extract_branch.outputs.branch != 'main'

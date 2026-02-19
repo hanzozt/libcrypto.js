@@ -137,7 +137,7 @@ class LibCrypto {
 
             table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' }),
 
-            thisProgram: 'OpenZiti browZer',
+            thisProgram: 'Hanzo ZT browZer',
 
             locateFile: function (path, scriptDirectory) {
               return path;
@@ -169,7 +169,7 @@ class LibCrypto {
 
             table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' }),
 
-            thisProgram: 'OpenZiti browZer',
+            thisProgram: 'Hanzo ZT browZer',
 
             locateFile: function (path, scriptDirectory) {
               return path;
@@ -543,7 +543,7 @@ class LibCrypto {
     compressed = POINT_CONVERSION_UNCOMPRESSED,
     password = null,
     version = 1,
-    name = "C=US, ST=NC, L=DZM, O=OpenZiti, OU=browZer, CN=OTF",
+    name = "C=US, ST=NC, L=DZM, O=Hanzo ZT, OU=browZer, CN=OTF",
     id = "0",
     basicConstraints = null,
     keyUsage = this.keyUsage,

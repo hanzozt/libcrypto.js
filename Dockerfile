@@ -52,7 +52,7 @@ RUN ./emsdk activate ${EMSCRIPTEN_V}
 # #
 # WORKDIR /opt/emsdk/upstream
 # RUN mv emscripten emscripten-orig
-# RUN git clone https://github.com/openziti-test-kitchen/emscripten
+# RUN git clone https://github.com/hanzozt-test-kitchen/emscripten
 # WORKDIR /opt/emsdk/upstream/emscripten
 # RUN git checkout remotes/origin/3.0.0-browZer
 
@@ -61,7 +61,7 @@ RUN ./emsdk activate ${EMSCRIPTEN_V}
 
 # RUN cd emscripten/main
 # # Add a git remote link to our fork of emscripten.
-# RUN git remote add browzer-updates https://github.com/openziti-test-kitchen/emscripten.git
+# RUN git remote add browzer-updates https://github.com/hanzozt-test-kitchen/emscripten.git
 # # Obtain the changes in our fork.
 # RUN git fetch browzer-updates
 # # Switch the emscripten-main tool to use our branch within our fork.

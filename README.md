@@ -1,34 +1,34 @@
 <p align="center" width="100%">
-<a href="https://openziti.io"><img src="ziti.png" width="100"></a>
+<a href="https://hanzozt.dev"><img src="ziti.png" width="100"></a>
 </p>
 
 <p align="center">
     <b>
-    <a>@openziti/libcrypto.js</a>
+    <a>@hanzozt/libcrypto.js</a>
     <br>
     <br>
     <b>
     This component contains the OpenSSL libcrypto library compiled to WebAssembly and pure JavaScript, with convenient wrappers.
-    This is used as part of the <a href="https://openziti.io/about">OpenZiti</a> Zero Trust browZer stack</b>
+    This is used as part of the <a href="https://hanzozt.dev/about">Hanzo ZT</a> Zero Trust browZer stack</b>
 </p>
 
 <p align="center">
     <br>
     <b>Are you interested in knowing how to easily embed programmable, high performance, zero trust networking into your app, on any internet connection, without VPNs?
     <br>
-    Learn more about our <a href="https://openziti.io/about">OpenZiti</a> project by clicking the image below:</b>
+    Learn more about our <a href="https://hanzozt.dev/about">Hanzo ZT</a> project by clicking the image below:</b>
     <br>
     <br>
-    <a href="https://openziti.io"><img src="ziti-dev-logo.png" width="200"></a>
+    <a href="https://hanzozt.dev"><img src="ziti-dev-logo.png" width="200"></a>
 </p>
 
 ---
-[![WASM-Build](https://github.com/openziti/libcrypto.js/workflows/Build-OpenSSL-WASM/badge.svg?branch=main)]()
-[![emcc-Build](https://github.com/openziti/libcrypto.js/workflows/Build-emcc-Container/badge.svg?branch=main)]()
-[![CodeQL](https://github.com/openziti/libcrypto.js/workflows/CodeQL/badge.svg?branch=main)]()
-[![Issues](https://img.shields.io/github/issues-raw/openziti/libcrypto.js)]()
+[![WASM-Build](https://github.com/hanzozt/libcrypto.js/workflows/Build-OpenSSL-WASM/badge.svg?branch=main)]()
+[![emcc-Build](https://github.com/hanzozt/libcrypto.js/workflows/Build-emcc-Container/badge.svg?branch=main)]()
+[![CodeQL](https://github.com/hanzozt/libcrypto.js/workflows/CodeQL/badge.svg?branch=main)]()
+[![Issues](https://img.shields.io/github/issues-raw/hanzozt/libcrypto.js)]()
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![LOC](https://img.shields.io/tokei/lines/github/openziti/libcrypto.js)]()
+[![LOC](https://img.shields.io/tokei/lines/github/hanzozt/libcrypto.js)]()
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=rounded)](CONTRIBUTING.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
@@ -78,7 +78,7 @@ Apache 2.0
 
 
 
-[npm-image]: https://flat.badgen.net/npm/v/@openziti/libcrypto.js
-[npm-url]: https://www.npmjs.com/package/@openziti/libcrypto.js
-[install-size-image]: https://flat.badgen.net/packagephobia/install/@openziti/libcrypto.js
-[install-size-url]: https://packagephobia.now.sh/result?p=@openziti/libcrypto.js
+[npm-image]: https://flat.badgen.net/npm/v/@hanzozt/libcrypto.js
+[npm-url]: https://www.npmjs.com/package/@hanzozt/libcrypto.js
+[install-size-image]: https://flat.badgen.net/packagephobia/install/@hanzozt/libcrypto.js
+[install-size-url]: https://packagephobia.now.sh/result?p=@hanzozt/libcrypto.js
