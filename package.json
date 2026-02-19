@@ -44,7 +44,7 @@
     "wasm-opt": "^1.4.0"
   },
   "keywords": [
-    "ziti",
+    "zt",
     "zero trust",
     "zero-trust",
     "browZer",

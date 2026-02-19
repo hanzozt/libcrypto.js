@@ -35,7 +35,7 @@ mergeInto(LibraryManager.library, {
   },
 
   /**
-   * @function ziti_getentropy
+   * @function zt_getentropy
    * 
    * When OpenSSL is cross-compiled into WebAssembly, it will link with this JS function
    * in order to obtain entropy.  We utilize the browser's 'crypto' mechanism to generate 
@@ -44,7 +44,7 @@ mergeInto(LibraryManager.library, {
    * @param {*} buf address within WASM heap to write random bytes
    * @param {*} buflen length of buffer within WASM heap
    */
-  ziti_getentropy: function (buf, buflen) {
+  zt_getentropy: function (buf, buflen) {
     let array = new Uint8Array(Module.HEAPU8.buffer, buf, buflen);
     crypto.getRandomValues(array);
   },
@@ -148,16 +148,16 @@ mergeInto(LibraryManager.library, {
 
     console.log('fd_read: entered');
 
-    if (fd < 10) {  // If not a ziti-browzer-core ZitiChannel fd
+    if (fd < 10) {  // If not a zt-browzer-core ZitiChannel fd
       var stream = SYSCALLS.getStreamFromFD(fd);
       var num = SYSCALLS.doReadv(stream, iov, iovcnt);
       HEAP32[pnum >> 2] = num;
       return 0;
     }
 
-    else {  // OK, we've got a ziti-browzer-core ZitiChannel fd, so find the associated ZitiChannel
+    else {  // OK, we've got a zt-browzer-core ZitiChannel fd, so find the associated ZitiChannel
 
-      const wasmFD = _zitiContext._wasmFDsById.get( fd );
+      const wasmFD = _ztContext._wasmFDsById.get( fd );
       if (wasmFD === null) throw new Error('cannot find wasmFD')
 
 
@@ -187,7 +187,7 @@ mergeInto(LibraryManager.library, {
    */
   fd_write: function(fd, iov, iovcnt, pnum) {
 
-    if (fd < 10) {  // If not a ziti-browzer-core ZitiChannel fd
+    if (fd < 10) {  // If not a zt-browzer-core ZitiChannel fd
       var num = 0;
       for (var i = 0; i < iovcnt; i++) {
         var ptr = HEAP32[iov >> 2];
@@ -203,9 +203,9 @@ mergeInto(LibraryManager.library, {
       return 0;  
     }
 
-    else {  // OK, we've got a ziti-browzer-core ZitiChannel fd, so find the associated ZitiChannel
+    else {  // OK, we've got a zt-browzer-core ZitiChannel fd, so find the associated ZitiChannel
 
-      const wasmFD = _zitiContext._wasmFDsById.get( fd );
+      const wasmFD = _ztContext._wasmFDsById.get( fd );
       if (wasmFD === null) throw new Error('cannot find wasmFD')
 
       // console.log("js-library:fd_write(): entered for fd: ", fd);

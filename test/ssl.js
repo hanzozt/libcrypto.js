@@ -36,7 +36,7 @@ describe("SSL", function () {
     expect(ssl).to.not.equal(undefined);
 
     let result = libCrypto.bio_set_conn_hostname(sbio, 'www.google.com:443');
-    // let result = libCrypto.bio_set_conn_hostname(sbio, 'ziti-edge-controller:1280');
+    // let result = libCrypto.bio_set_conn_hostname(sbio, 'zt-edge-controller:1280');
     console.log(result);
     expect(result).to.equal(1);
 

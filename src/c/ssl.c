@@ -323,13 +323,13 @@ int bio_do_connect(BIO *sbio)
 
 
 /**
- *  ziti_connected_cb
+ *  zt_connected_cb
  * 
  *  Locate the connected callback for the specified fd.  If found, invoke it
  */
-// EM_JS(void, ziti_connected_cb, (int fd, int rc), {
+// EM_JS(void, zt_connected_cb, (int fd, int rc), {
 
-//     const wasmFD = _zitiContext._wasmFDsById.get( fd );
+//     const wasmFD = _ztContext._wasmFDsById.get( fd );
 //     if (wasmFD === null) {
 //         throw new Error('cannot find wasmFD');
 //     }
@@ -357,7 +357,7 @@ int ssl_do_handshake_for_real(SSL *ssl, int v1, int v2)
     // printf("ssl_do_handshake() rc=%d\n", rc);
 
     /* Execute the callback */
-    // ziti_connected_cb( SSL_get_fd(ssl), rc );
+    // zt_connected_cb( SSL_get_fd(ssl), rc );
 
     // return 1;
 }
@@ -410,13 +410,13 @@ int tls_write(SSL *ssl, const void *buffer, int len)
 // }
 
 /**
- *  ziti_read_cb
+ *  zt_read_cb
  * 
  *  Locate the read callback for the specified fd.  If found, invoke it
  */
-EM_JS(void, ziti_read_cb, (int fd, void *buffer, int read_len, void *memory), {
+EM_JS(void, zt_read_cb, (int fd, void *buffer, int read_len, void *memory), {
 
-    const wasmFD = _zitiContext._wasmFDsById.get( fd );
+    const wasmFD = _ztContext._wasmFDsById.get( fd );
 
     if (wasmFD === null) {
         throw new Error('cannot find wasmFD');
@@ -451,7 +451,7 @@ EM_JS(void, ziti_read_cb, (int fd, void *buffer, int read_len, void *memory), {
 //  */
 // EM_ASYNC_JS(void, acquireTLSReadLock, (int fd), {
 //     console.log("wasm.acquireTLSReadLock() --> for fd[%d]", fd);
-//     const wasmFD = _zitiContext._wasmFDsById.get( fd );
+//     const wasmFD = _ztContext._wasmFDsById.get( fd );
 //     if (wasmFD) {
 //         await wasmFD.socket.acquireTLSReadLock();
 //     }
@@ -466,7 +466,7 @@ EM_JS(void, ziti_read_cb, (int fd, void *buffer, int read_len, void *memory), {
 //  */
 // EM_JS(void, releaseTLSReadLock, (int fd), {
 //     console.log("wasm.releaseTLSReadLock() <-- for fd[%d]", fd);
-//     const wasmFD = _zitiContext._wasmFDsById.get( fd );
+//     const wasmFD = _ztContext._wasmFDsById.get( fd );
 //     if (wasmFD) {
 //         wasmFD.socket.releaseTLSReadLock();
 //     }

@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<a href="https://hanzozt.dev"><img src="ziti.png" width="100"></a>
+<a href="https://hanzozt.dev"><img src="zt.png" width="100"></a>
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
     Learn more about our <a href="https://hanzozt.dev/about">Hanzo ZT</a> project by clicking the image below:</b>
     <br>
     <br>
-    <a href="https://hanzozt.dev"><img src="ziti-dev-logo.png" width="200"></a>
+    <a href="https://hanzozt.dev"><img src="zt-dev-logo.png" width="200"></a>
 </p>
 
 ---
@@ -55,7 +55,7 @@ users to access it, _AND_ you do not need to make any modifications to your web 
 
 <br>
 <p align="center" width="100%">
-<a href="https://ziti.dev"><img src="browZer-diagram.png" width="600"></a>
+<a href="https://zt.dev"><img src="browZer-diagram.png" width="600"></a>
 </p>
 
 

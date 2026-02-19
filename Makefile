@@ -136,7 +136,7 @@ libcrypto.JSPI.wasm: $(OPENSSL_DIR)/libcrypto.a $(OPENSSL_DIR)/libssl.a
 
 #	-s USE_ES6_IMPORT_META=0 \
 
-#   -s ASYNCIFY_IMPORTS=[start_ziti_awaitTLSDataQueue_timer] \
+#   -s ASYNCIFY_IMPORTS=[start_zt_awaitTLSDataQueue_timer] \
 
 # 	-s ASSERTIONS=1 \
 #		-s VERBOSE \
